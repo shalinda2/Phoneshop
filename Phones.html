@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phones</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Abel&family=Alatsi&display=swap");
+      #mainMenu > a:hover,
+      .active {
+        background: url(images/up-arrow.svg) no-repeat center bottom;
+      }
+      :root {
+        --font1: "Abel", sans-serif;
+        --font2: "Alatsi", sans-serif;
+      }
+
+      #sec1 {
+        background: linear-gradient(90deg, #b11f4c, #470149);
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+      #sec1Container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #sec1Left {
+        padding-right: 188px;
+      }
+
+      #sec1Left > h1 {
+        font-size: 65px;
+        color: white;
+        /* font-weight: normal; */
+      }
+      #sec1Left > p {
+        font-size: 24px;
+        color: #e9afaf;
+        padding: 20px 0;
+      }
+      /* Mobile phones */
+      #sec2Up {
+        display: flex;
+        align-items: center;
+      }
+      #sec2Up > h2 {
+        text-transform: capitalize;
+        margin-left: 50px;
+        color: red;
+        font-family: var(--font1);
+      }
+      #sec2Up > h1 {
+        color: red;
+        font-size: 50px;
+      }
+      #sec2 {
+        background: #470149;
+        padding: 50px 0;
+      }
+      #sec2Down > p {
+        font-family: var(--font1);
+        color: white;
+      }
+
+      /* Section3 */
+      #sec3 {
+        background: #e6e6e6;
+        padding: 30px 0px;
+      }
+      #sec3Container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .phoneDetails {
+        display: flex;
+        width: 49%;
+        justify-content: space-between;
+        background: white;
+        padding: 20px 20px;
+        margin-top: 20px;
+      }
+      .phonePara {
+        padding: 0px 30px;
+      }
+      .phonePara > h1 {
+        color: red;
+      }
+      .phonePara > h1,
+      h2 {
+        font-size: 40px;
+        margin: 5px 0px;
+      }
+      .phonePara > p {
+        margin: 10px 0px;
+      }
+      .phonePara > h3 {
+        font-family: var(--font1);
+        font-weight: 200;
+        margin: 5px 0px;
+        font-size: 30px;
+      }
+      /* section 4 */
+      #sec4 {
+        background: #470149;
+        padding: 40px 0px;
+      }
+      #sec4Up {
+        display: flex;
+        margin: 30px 0px;
+        align-items: center;
+      }
+      #sec4Up > h2 {
+        text-transform: capitalize;
+        margin-left: 50px;
+        color: red;
+        font-family: var(--font1);
+      }
+      #sec4Up > h1 {
+        color: red;
+        font-size: 50px;
+      }
+
+      #sec4Down > p {
+        font-family: var(--font1);
+        color: white;
+      }
+      /* section 5 */
+      #sec5 {
+        background: #e6e6e6;
+        padding: 40px 0px;
+      }
+      #sec5Container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+
+                     /* ----------------------------medea quary start----------------------------- */
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+      @media screen and (max-width: 1240px) {
+        .wrapper {
+          width: 96%;
+          padding-left: 2%;
+          padding-right: 2%;
+        }
+      }
+      @media screen and (max-width: 1080px) {
+        /* main menu */
+        #mainMenu {
+          display: none;
+        }
+        /* section 1 */
+        #sec1Container {
+          flex-direction: column;
+          align-content: center;
+        }
+        #sec1Left {
+          padding: 0;
+        }
+        .phoneDetails {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+        .phonePara {
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 920px) {
+        /* Section 2 */
+        #sec2Up {
+          flex-direction: column;
+          margin-left: 0px;
+        }
+        /* section 4 */
+        #sec4Up {
+          flex-direction: column;
+          margin-left: 0px;
+        }
+        /* section 3 */
+        #sec3Container {
+          flex-direction: column;
+          align-items: center;
+        }
+        /* section 5 */
+        #sec5Container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      @media screen and (max-width: 720px) {
+        /* section 4 */
+        #sec4Up > h1 {
+          font-size: 30px;
+        }
+        #sec4Up > h2 {
+          font-size: 20px;
+          margin: 0;
+        }
+        #sec4Down > p {
+          font-size: 15px;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        /* main menu */
+        #logo {
+          height: 30px;
+        }
+        #menuIcon {
+          height: 30px;
+        }
+        /* section 1 */
+        #sec1Left > h1 {
+          font-size: 40px;
+        }
+        #sec1Left > p {
+          font-size: 17px;
+        }
+        #sec1Container > img {
+          height: 380px;
+        }
+        /* Section 2 */
+        #sec2Up > h1 {
+          font-size: 30px;
+        }
+        #sec2Up > h2 {
+          font-size: 20px;
+          margin: 0;
+        }
+        #sec2Down > p {
+          font-size: 15px;
+        }
+        /* section 4 */
+        #sec4Up > h1 {
+          font-size: 30px;
+        }
+        #sec4Up > h2 {
+          font-size: 20px;
+          margin: 0;
+        }
+        #sec4Down > p {
+          font-size: 15px;
+        }
+        /* footer */
+        #footerMenu{
+          flex-direction: column;
+          align-items: center;
+        }
+        #footerMenu > span {
+          display: none;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="wrapper" id="headerContent">
+        <img src="images/logo.svg" alt="Logo" id="logo" />
+        <div id="headerRight">
+          <nav id="mainMenu">
+            <a href="index.html" class="active">Home</a>
+            <span>|</span>
+            <a href="Phones.html">Phones & Accessories</a>
+            <span>|</span>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+          <img id="menuIcon" src="images/menu-icon.svg" alt="Menu" />
+        </div>
+      </div>
+    </header>
+
+    <!-- section 1 -->
+
+    <section id="sec1">
+      <div class="wrapper" id="sec1Container">
+        <div id="sec1Left">
+          <h1>
+            Phone &<br />
+            Accessories
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            sed reiciendis enim quia, deleniti quasi nemo in expedita ut,
+            excepturi dolorum ad incidunt accusamus natus?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            sed reiciendis enim quia, deleniti quasi nemo in expedita ut,
+            excepturi dolorum ad incidunt accusamus natus?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            sed reiciendis enim quia, deleniti quasi nemo in expedita ut,
+            excepturi dolorum ad incidunt accusamus natus?
+          </p>
+        </div>
+        <img src="images/two-phones.png" alt="Two Phones" />
+      </div>
+    </section>
+    <!-- Mobile Phones -->
+    <section id="sec2">
+      <div class="wrapper">
+        <div id="sec2Up">
+          <h1>Mobile phones</h1>
+          <h2>Iphones & android</h2>
+        </div>
+        <div id="sec2Down">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            repudiandae labore debitis incidunt autem voluptas. Animi aliquid
+            enim necessitatibus veritatis provident, qui accusamus aut fuga
+            itaque vitae reprehenderit! Quis quae enim odio ipsam hic et eveniet
+            animi voluptatibus blanditiis quibusdam esse, voluptate fugiat,
+            voluptatem eaque necessitatibus at eligendi ipsa totam. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Illo repudiandae labore
+            debitis incidunt autem voluptas. Animi aliquid enim necessitatibus
+            veritatis provident, qui accusamus aut fuga itaque vitae
+            reprehenderit! Quis quae enim odio ipsam hic et eveniet animi
+            voluptatibus blanditiis quibusdam esse, voluptate fugiat, voluptatem
+            eaque necessitatibus at eligendi ipsa totam.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3 -->
+    <section id="sec3">
+      <div class="wrapper">
+        <div id="sec3Container">
+          <div class="phoneDetails">
+            <div class="phonePic">
+              <img src="images/smartphone.png" alt="smartphone" />
+            </div>
+            <div class="phonePara">
+              <h1>Lorem ipsum.</h1>
+              <h2>x500c</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+                eaque voluptas et facere nisi quaerat assumenda illum facilis,
+                dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+                praesentium nihil alias dignissimos.
+              </p>
+              <h3>$655.78</h3>
+            </div>
+          </div>
+          <div class="phoneDetails">
+            <div class="phonePic">
+              <img src="images/smartphone.png" alt="smartphone" />
+            </div>
+            <div class="phonePara">
+              <h1>Lorem ipsum.</h1>
+              <h2>x500c</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+                eaque voluptas et facere nisi quaerat assumenda illum facilis,
+                dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+                praesentium nihil alias dignissimos.
+              </p>
+              <h3>$655.78</h3>
+            </div>
+          </div>
+          <div class="phoneDetails">
+            <div class="phonePic">
+              <img src="images/smartphone.png" alt="smartphone" />
+            </div>
+            <div class="phonePara">
+              <h1>Lorem ipsum.</h1>
+              <h2>x500c</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+                eaque voluptas et facere nisi quaerat assumenda illum facilis,
+                dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+                praesentium nihil alias dignissimos.
+              </p>
+              <h3>$655.78</h3>
+            </div>
+          </div>
+          <div class="phoneDetails">
+            <div class="phonePic">
+              <img src="images/smartphone.png" alt="smartphone" />
+            </div>
+            <div class="phonePara">
+              <h1>Lorem ipsum.</h1>
+              <h2>x500c</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+                eaque voluptas et facere nisi quaerat assumenda illum facilis,
+                dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+                praesentium nihil alias dignissimos.
+              </p>
+              <h3>$655.78</h3>
+            </div>
+          </div>
+          <div class="phoneDetails">
+            <div class="phonePic">
+              <img src="images/smartphone.png" alt="smartphone" />
+            </div>
+            <div class="phonePara">
+              <h1>Lorem ipsum.</h1>
+              <h2>x500c</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+                eaque voluptas et facere nisi quaerat assumenda illum facilis,
+                dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+                praesentium nihil alias dignissimos.
+              </p>
+              <h3>$655.78</h3>
+            </div>
+          </div>
+          <div class="phoneDetails">
+            <div class="phonePic">
+              <img src="images/smartphone.png" alt="smartphone" />
+            </div>
+            <div class="phonePara">
+              <h1>Lorem ipsum.</h1>
+              <h2>x500c</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+                eaque voluptas et facere nisi quaerat assumenda illum facilis,
+                dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+                praesentium nihil alias dignissimos.
+              </p>
+              <h3>$655.78</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Accessories -->
+    <section id="sec4">
+      <div class="wrapper">
+        <div id="sec4Up">
+          <h1>Accessories</h1>
+          <h2>temperd glass , back covers , chagers and more..</h2>
+        </div>
+        <div id="sec4Down">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            repudiandae labore debitis incidunt autem voluptas. Animi aliquid
+            enim necessitatibus veritatis provident, qui accusamus aut fuga
+            itaque vitae reprehenderit! Quis quae enim odio ipsam hic et eveniet
+            animi voluptatibus blanditiis quibusdam esse, voluptate fugiat,
+            voluptatem eaque necessitatibus at eligendi ipsa totam. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Illo repudiandae labore
+            debitis incidunt autem voluptas. Animi aliquid enim necessitatibus
+            veritatis provident, qui accusamus aut fuga itaque vitae
+            reprehenderit! Quis quae enim odio ipsam hic et eveniet animi
+            voluptatibus blanditiis quibusdam esse, voluptate fugiat, voluptatem
+            eaque necessitatibus at eligendi ipsa totam.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section 5 -->
+    <section id="sec5">
+      <div class="wrapper" id="sec5Container">
+        <div class="phoneDetails">
+          <div class="phonePic">
+            <img src="images/smartphone.png" alt="smartphone" />
+          </div>
+          <div class="phonePara">
+            <h1>Lorem ipsum.</h1>
+            <h2>x500c</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+              eaque voluptas et facere nisi quaerat assumenda illum facilis,
+              dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+              praesentium nihil alias dignissimos.
+            </p>
+            <h3>$655.78</h3>
+          </div>
+        </div>
+        <div class="phoneDetails">
+          <div class="phonePic">
+            <img src="images/smartphone.png" alt="smartphone" />
+          </div>
+          <div class="phonePara">
+            <h1>Lorem ipsum.</h1>
+            <h2>x500c</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+              eaque voluptas et facere nisi quaerat assumenda illum facilis,
+              dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+              praesentium nihil alias dignissimos.
+            </p>
+            <h3>$655.78</h3>
+          </div>
+        </div>
+        <div class="phoneDetails">
+          <div class="phonePic">
+            <img src="images/smartphone.png" alt="smartphone" />
+          </div>
+          <div class="phonePara">
+            <h1>Lorem ipsum.</h1>
+            <h2>x500c</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+              eaque voluptas et facere nisi quaerat assumenda illum facilis,
+              dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+              praesentium nihil alias dignissimos.
+            </p>
+            <h3>$655.78</h3>
+          </div>
+        </div>
+        <div class="phoneDetails">
+          <div class="phonePic">
+            <img src="images/smartphone.png" alt="smartphone" />
+          </div>
+          <div class="phonePara">
+            <h1>Lorem ipsum.</h1>
+            <h2>x500c</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              excepturi? Eveniet mollitia fugit, recusandae aperiam quia vel
+              eaque voluptas et facere nisi quaerat assumenda illum facilis,
+              dolore sit vitae. Ut neque debitis aut sunt corrupti aspernatur
+              praesentium nihil alias dignissimos.
+            </p>
+            <h3>$655.78</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="wrapper">
+        <nav id="footerMenu">
+          <a href="index.html">Home</a>
+          <span>|</span>
+          <a href="Phones.html">Phones &amp; Accessories</a>
+          <span>|</span>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <p id="footerText">All Rights Reserved &copy; Webclass</p>
+      </div>
+    </footer>
+  </body>
+</html>

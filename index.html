@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone House</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Abel&family=Alatsi&display=swap");
+
+      :root {
+        --font1: "Abel", sans-serif;
+        --font2: "Alatsi", sans-serif;
+      }
+
+      #mainMenu > a:hover,
+      .active {
+        background: url(images/up-arrow.svg) no-repeat center bottom;
+      }
+
+      /* section 1 */
+      #sec1 {
+        background: linear-gradient(90deg, #b11f4c, #470149);
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+      #sec1Container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #sec1Left > h1 {
+        font-size: 65px;
+        color: white;
+      }
+      #sec1Left > p {
+        font-size: 24px;
+        color: #e9afaf;
+        padding: 20px 0;
+      }
+      #sec1Left > a {
+        font-family: var(--font2);
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 20px;
+        background: #e9afaf;
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #88134b;
+      }
+
+      /* Section 2 */
+      #sec2 {
+        background: #44275d;
+        padding: 40px 0 60px;
+      }
+      #sec2Top,
+      #sec2Bottom {
+        display: flex;
+        justify-content: space-between;
+      }
+      #sec2Girl {
+        margin-right: 100px;
+        margin-top: -100px;
+        position: relative;
+        width: fit-content;
+      }
+      #sec2Girl:hover::before {
+        right: -30px;
+        bottom: -30px;
+      }
+      #sec2Heading1,
+      #sec2Heading2 {
+        color: red;
+        font-size: 40px;
+      }
+      .sec2Text {
+        color: #e6e6e6;
+        margin-top: 25px;
+      }
+      #sec2Heading1::before {
+        content: "01";
+      }
+      #sec2Heading2::before {
+        content: "02";
+        margin-top: 60px;
+      }
+      #sec2Heading1::before,
+      #sec2Heading2::before {
+        color: #e6e6e6;
+        font-family: var(--font1);
+        font-size: 90px;
+        display: block;
+      }
+
+      #sec2Boy {
+        margin-left: 100px;
+        position: relative;
+        bottom: -100px;
+        width: fit-content;
+      }
+      #sec2Boy::before {
+        border-left: 15px solid #7c104b;
+        left: -12px;
+      }
+      #sec2Girl::before {
+        border-right: 15px solid #7c104b;
+        right: -12px;
+      }
+      #sec2Boy::before,
+      #sec2Girl::before {
+        content: "";
+        width: 200px;
+        height: 300px;
+        border-bottom: 15px solid #7c104b;
+        position: absolute;
+        bottom: -12px;
+
+        transition: 1s all;
+      }
+      #sec2Boy:hover::before {
+        left: -30px;
+        bottom: -30px;
+      }
+      /* section 3 */
+      #sec3 {
+        background: #e6e6e6;
+        padding: 40px 0 60px;
+      }
+      #sec3Heading {
+        font-size: 50px;
+        color: red;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      #sec3Text {
+        text-align: center;
+        padding: 0 150px;
+      }
+
+      #sec3Container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+      }
+      .card > span {
+        text-align: center;
+        font-family: var(--font1);
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      .round {
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        border: 4px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font1);
+        font-size: 40px;
+        color: #333;
+      }
+
+      /* contact section */
+
+      #sec4 {
+        background: linear-gradient(
+            rgba(68, 39, 93, 0.7),
+            rgba(68, 39, 93, 0.7)
+          ),
+          url(images/banner.png) no-repeat;
+        background-size: cover;
+      }
+
+      #sec4Container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #sec4Left > h1 {
+        color: white;
+        font-size: 50px;
+        margin-top: 50px;
+      }
+
+      #sec4Left > p {
+        color: #e6e6e6;
+      }
+
+      #customerSupport {
+        position: relative;
+        width: fit-content;
+        margin-top: 50px;
+        bottom: -60px;
+      }
+
+      #customerSupport::before {
+        content: "";
+        width: 200px;
+        height: 300px;
+        border-top: 15px solid #7c104b;
+        border-right: 15px solid #7c104b;
+        position: absolute;
+        transition: 1s all;
+        top: -12px;
+        right: -12px;
+        transition: 1s all;
+      }
+
+      #customerSupport:hover::before {
+        top: -30px;
+        right: -30px;
+      }
+      #contactForm {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+      }
+      .formItem {
+        background: rgba(233, 175, 175, 0.7);
+        padding: 20px;
+        font-family: var(--font1);
+        margin: 30px 0;
+        border: 0;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+
+      #contactForm > button {
+        background: #b01e4d;
+        color: #d2bebe;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 24px;
+        padding: 20px;
+        border: 0;
+        border-radius: 5px;
+        width: 220px;
+        font-family: var(--font2);
+      }
+
+      /* section 5 */
+      #sec5 {
+        background: linear-gradient(120deg, #af1e4e, #800080 60%, #43005d 60%);
+      }
+      #sec5Container {
+        display: flex;
+      }
+      #sec5Container > div {
+        width: 50%;
+      }
+      #sec5Heading {
+        font-size: 40px;
+        color: red;
+      }
+      #sec5Text {
+        color: #e6e6e6;
+        margin-top: 25px;
+      }
+      #sec5Heading::before {
+        color: #e6e6e6;
+        font-family: var(--font1);
+        font-size: 90px;
+        display: block;
+        content: "03";
+      }
+      #sec5Right {
+        background: #43005d;
+        padding: 100px 0 50px 50px;
+      }
+      #sec5Left {
+        text-align: center;
+        padding: 100px 0 40px;
+      }
+      #sec5Left > img {
+        width: 400px;
+      }
+      /* section 6 */
+      #sec6 {
+        background: linear-gradient(120deg, #eee 40%, #800080 40%, #af1e4e);
+      }
+      #sec6Container {
+        display: flex;
+      }
+      #sec6Container > div {
+        width: 50%;
+      }
+      #sec6Left {
+        background: #eee;
+        padding-left: 60px;
+      }
+      #sec6Left > h1 {
+        color: red;
+        font-size: 40px;
+        margin-top: 50px;
+      }
+      #sec6Left > p {
+        margin-top: 25px;
+        padding-right: 50px;
+      }
+      #sec6Left > a {
+        background: #600b70;
+        padding: 15px 30px;
+        display: inline-block;
+        font-size: 23px;
+        font-family: var(--font2);
+        color: #e9afaf;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 40px;
+        text-transform: uppercase;
+      }
+      #sec6Right {
+        text-align: center;
+        padding: 40px 0;
+      }
+
+      /* section 7 */
+      #sec7 {
+        background: #7c104b;
+        padding: 40px 0;
+      }
+      #sec7Heading {
+        color: #e9afaf;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      #sec7Text {
+        color: #eee;
+      }
+
+      #sec7Heading,
+      #sec7Text {
+        padding-left: 150px;
+        padding-right: 150px;
+      }
+      #subscribe {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      #subscribe > input {
+        width: 350px;
+        padding: 15px 20px;
+        font-family: var(--font1);
+        font-size: 18px;
+        border: 0;
+        background: #e9afaf;
+        border-radius: 4px;
+      }
+      #subscribe > button {
+        padding: 15px 60px;
+        border-radius: 4px;
+        background: #af1e4e;
+        text-transform: uppercase;
+        font-family: var(--font2);
+        color: white;
+        font-size: 20px;
+        border: 0;
+        border-radius: 4px;
+        width: 220px;
+        text-align: center;
+        margin-right: 130px;
+      }
+      @media screen and (max-width: 1240px) {
+        .wrapper {
+          width: 96%;
+          padding-left: 2%;
+          padding-right: 2%;
+        }
+      }
+      @media screen and (max-width: 1080px) {
+        /* section 1 */
+        #mainMenu {
+          display: none;
+        }
+        /* section 7 */
+        #sec7Heading,
+        #sec7Text {
+          padding: 0px;
+        }
+      }
+      @media screen and (max-width: 980px) {
+        /* section 1 */
+        #sec1Container {
+          flex-direction: column;
+        }
+        #twoPhones {
+          margin: 30px 0;
+        }
+        /* #sec1Left > h1,
+                p {
+                  align-items: center;
+                } */
+        #sec1Left {
+          align-items: center;
+
+          display: flex;
+          flex-direction: column;
+        }
+        /* section 5 */
+        #sec5Container {
+          flex-direction: column;
+        }
+        #sec5 {
+          background: linear-gradient(
+            900deg,
+            #af1e4e,
+            #800080 60%,
+            #43005d 60%
+          );
+        }
+        #sec5Right {
+          background: none;
+        }
+        #sec5Container > div {
+          width: 100%;
+        }
+        #sec6Container {
+          flex-direction: column;
+        }
+        #sec6 {
+          background: linear-gradient(
+            900deg,
+            #af1e4e,
+            #800080 60%,
+            #43005d 60%
+          );
+        }
+        #sec6Right {
+          background: none;
+        }
+        #sec6Container > div {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        #sec2Girl::before {
+          margin-left: 0px;
+        }
+        #sec2Boy::before {
+          margin-top: 0px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        /* section 2 */
+        #sec2Top {
+          flex-direction: column;
+        }
+        #sec2Bottom {
+          flex-direction: column;
+        }
+        #sec3Text {
+          padding: 0px;
+        }
+        /* section 3 */
+        .round {
+          width: 108px;
+          height: 108px;
+        }
+        /* section 4 */
+        #sec4Container {
+          flex-direction: column;
+        }
+        #contactForm {
+          width: 100%;
+          margin: 30px 0px;
+        }
+        /* section 7 */
+        #subscribe > button {
+          margin: 0px;
+        }
+      }
+
+      @media screen and (max-width: 580px) {
+        /* section 1 */
+        #logo {
+          height: 30px;
+        }
+        #menuIcon {
+          height: 30px;
+        }
+        /* section 1 */
+        #sec1Left > h1 {
+          font-size: 45px;
+        }
+        #sec1Left > p {
+          font-size: 25px;
+        }
+        #sec1Left > a {
+          font-size: 20px;
+        }
+        /* section 3 */
+        #sec3Container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .card > span {
+          text-align: start;
+        }
+        /* section 5 */
+        #sec5Left > img {
+          width: 100%;
+        }
+        /* section 6 */
+        #sec6Right > img {
+          width: 100%;
+        }
+        /* footer */
+        #footerMenu {
+          flex-direction: column;
+          align-items: center;
+        }
+        #footerMenu > span {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 475px) {
+        /* section 1 */
+        #sec1Left > h1 {
+          font-size: 40px;
+        }
+        #sec1Left > p {
+          font-size: 20px;
+        }
+        #sec1Left > a {
+          font-size: 15px;
+        }
+        #twoPhones {
+          height: 350px;
+        }
+        /* section 2 */
+        #sec2Heading1,
+        #sec2Heading2 {
+          font-size: 45px;
+        }
+        .sec2Text {
+          font-size: 15px;
+        }
+        #sec2Heading1::before,
+        #sec2Heading2::before {
+          font-size: 70px;
+        }
+        #sec2Boy {
+          margin-left: 0px;
+        }
+        /* section 3 */
+        #sec3Heading {
+          font-size: 40px;
+        }
+        #sec3 > div > p {
+          font-size: 15px;
+        }
+        /* section 4 */
+        #customerSupport > img {
+          height: 400px;
+        }
+        /* sectin 5 */
+        #sec5Heading::before {
+          font-size: 55px;
+        }
+        #sec5Heading {
+          font-size: 30px;
+        }
+        #sec5Text {
+          font-size: 15px;
+        }
+        /* section 7 */
+        #subscribe {
+          width: 100%;
+        }
+        #subscribe > button {
+          padding: 0%;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        #subscribe > input {
+          font-size: 13px;
+        }
+        #subscribe > button {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="wrapper" id="headerContent">
+        <img src="images/logo.svg" alt="Logo" id="logo" />
+        <div id="headerRight">
+          <nav id="mainMenu">
+            <a href="index.html" class="active">Home</a>
+            <span>|</span>
+            <a href="Phones.html">Phones & Accessories</a>
+            <span>|</span>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+          <img src="images/menu-icon.svg" alt="Menu" id="menuIcon" />
+        </div>
+      </div>
+    </header>
+    <!-- main section -->
+    <section id="sec1">
+      <div class="wrapper" id="sec1Container">
+        <div id="sec1Left">
+          <h1>
+            Now available<br />
+            in-store & online
+          </h1>
+          <p>We are an authorised reseller</p>
+          <a href="Phones.html">View Phones & Accessories</a>
+        </div>
+        <img src="images/two-phones.png" alt="Two Phones" id="twoPhones" />
+      </div>
+    </section>
+
+    <!-- purple bg section -->
+    <section id="sec2">
+      <div class="wrapper" id="sec2Top">
+        <div id="sec2Girl">
+          <img src="images/girl-with-phone.png" alt="Girl" />
+        </div>
+        <div>
+          <h1 id="sec2Heading1">
+            Best Prices<br />
+            in Town
+          </h1>
+          <p class="sec2Text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            provident cum sunt cumque eius repellendus, iusto consectetur
+            delectus quisquam hic nobis adipisci esse molestias ea ipsa dolores
+            voluptas, quis magni tenetur eos. Atque nam placeat, incidunt rem
+            perspiciatis nemo veniam.
+          </p>
+        </div>
+      </div>
+      <div class="wrapper" id="sec2Bottom">
+        <div>
+          <h1 id="sec2Heading2">
+            After Sales<br />
+            Service Support
+          </h1>
+          <p class="sec2Text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            non ducimus quaerat doloribus deleniti, rerum quasi suscipit, ipsam,
+            distinctio nisi maiores molestias facere consectetur animi
+            repudiandae optio voluptates perspiciatis praesentium atque? Vitae
+            quibusdam recusandae sunt natus quos, ducimus nulla minus.
+          </p>
+        </div>
+        <div id="sec2Boy">
+          <img src="images/boy-with-phone.png" alt="Boy" />
+        </div>
+      </div>
+    </section>
+    <!-- sales completed -->
+    <section id="sec3">
+      <div class="wrapper">
+        <h1 id="sec3Heading">Sales Completed</h1>
+        <p id="sec3Text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sunt
+          culpa, officiis nihil, sapiente eveniet vitae perferendis consequatur,
+          animi delectus porro cum. Quod saepe dolores doloremque blanditiis
+          impedit, aliquid provident.
+        </p>
+        <div id="sec3Container">
+          <div class="card">
+            <div class="round">884</div>
+            <span>Phone Back Covers</span>
+          </div>
+          <div class="card">
+            <div class="round">975</div>
+            <span>Phone Chargers</span>
+          </div>
+          <div class="card">
+            <div class="round">1578</div>
+            <span>Tempered Glass</span>
+          </div>
+          <div class="card">
+            <div class="round">6652</div>
+            <span>Mobile Phones (iphone & samsung)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="sec4">
+      <div class="wrapper" id="sec4Container">
+        <div id="sec4Left">
+          <h1>Contact Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt animi
+            exercitationem quis.
+          </p>
+          <div id="customerSupport">
+            <img src="images/customer-support.png" alt="Customer Support" />
+          </div>
+        </div>
+        <form action="" id="contactForm">
+          <input class="formItem" type="text" placeholder="Your Name" />
+          <input class="formItem" type="email" placeholder="Email Address" />
+          <textarea class="formItem" placeholder="Message"></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+    </section>
+    <!-- section 5 -->
+    <section id="sec5">
+      <div class="wrapper" id="sec5Container">
+        <div id="sec5Left">
+          <img src="images/headphone-with-phone.png" alt="Headphone" />
+        </div>
+        <div id="sec5Right">
+          <h1 id="sec5Heading">Purchase More and <br />Win Prizes</h1>
+          <p id="sec5Text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+            dolor aliquam eligendi, odit incidunt commodi ea laborum asperiores
+            veritatis tempora.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section6 -->
+    <section id="sec6">
+      <div class="wrapper" id="sec6Container">
+        <div id="sec6Left">
+          <h1>
+            Refer a Friend<br />
+            And get 20% Off
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quia
+            quaerat ea voluptas atque sit minus, magni alias cum nesciunt
+            tempore error, reiciendis laboriosam rerum doloremque tenetur esse
+            modi veniam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+            excepturi id ut praesentium accusamus fugiat tempore alias beatae,
+            voluptate repellendus architecto dolorum delectus quae corporis
+            labore quas commodi ea facere?
+          </p>
+          <a href="#">Read More &gt;&gt;</a>
+        </div>
+        <div id="sec6Right">
+          <img src="images/promotion.png" alt="Promotion" />
+        </div>
+      </div>
+    </section>
+
+    <!-- section 7 -->
+    <section id="sec7">
+      <div class="wrapper">
+        <h1 id="sec7Heading">
+          Subscribe and get the latest price list every weekend
+        </h1>
+        <p id="sec7Text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          doloribus sint accusamus dolore fuga explicabo et aliquid optio
+          aspernatur cum, ut tenetur cupiditate quis corporis pariatur
+          perferendis, molestias fugiat! Totam!
+        </p>
+        <form action="" id="subscribe">
+          <input type="email" placeholder="Email Address" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="wrapper">
+        <nav id="footerMenu">
+          <a href="index.html">Home</a>
+          <span>|</span>
+          <a href="Phones.html">Phones &amp; Accessories</a>
+          <span>|</span>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <p id="footerText">All Rights Reserved &copy; Webclass</p>
+      </div>
+    </footer>
+  </body>
+</html>

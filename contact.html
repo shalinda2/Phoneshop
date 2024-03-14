@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact US</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Abel&family=Alatsi&display=swap");
+      #mainMenu > a:hover,
+      .active {
+        background: url(images/up-arrow.svg) no-repeat center bottom;
+      }
+
+      :root {
+        --font1: "Abel", sans-serif;
+        --font2: "Alatsi", sans-serif;
+      }
+      /* section 1 */
+      #sec1 {
+        background: linear-gradient(90deg, #b11f4c, #470149);
+        padding-top: 40px;
+        padding-bottom: 60px;
+      }
+      #contact {
+        display: flex;
+        justify-content: space-between;
+      }
+      #sec1Left {
+        width: 49%;
+      }
+      #sec1Left > div {
+        display: flex;
+        padding: 15px 0;
+      }
+      #sec1Left > h1 {
+        color: white;
+        font-family: var(--font2);
+        font-size: 40px;
+        padding-bottom: 20px;
+      }
+      #sec1Left > p {
+        color: #e8adae;
+        font-family: var(--font1);
+      }
+      #sec1Left > div > p {
+        color: #e8adae;
+        font-family: var(--font2);
+      }
+      #sec1Left > div > img {
+        padding-right: 30px;
+      }
+      #sec1Right > img {
+        margin-bottom: -90px;
+      }
+      /* Section 2 */
+      #sec2 {
+        background: #470149;
+        padding: 50px 0;
+      }
+      #sec2Left {
+        width: 49%;
+      }
+      #sec2Right {
+        width: 47%;
+      }
+      #sec2Container {
+        display: flex;
+        justify-content: space-between;
+      }
+      #sec2Left > h1 {
+        color: red;
+        font-size: 36px;
+        margin: 20px 0px;
+      }
+      #form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .field {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+      }
+      .field > input,
+      .field > textarea {
+        border: none;
+        width: 100%;
+        background: #c8949f;
+        border-radius: 0 5px 5px 0;
+      }
+      .field > input {
+        height: 60px;
+      }
+      #textP {
+        height: 120px;
+      }
+      #textarea {
+        height: 120px;
+      }
+      .field > p {
+        background: #b01e4d;
+        height: 60px;
+        border-radius: 5px 0 0 5px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 20px;
+        box-sizing: border-box;
+      }
+      .label {
+        width: 30%;
+      }
+      #sendMsg {
+        width: 50%;
+        padding-right: 50px;
+        box-sizing: border-box;
+      }
+      #ourBranches {
+        width: 50%;
+        padding-top: 60px;
+      }
+      #ourBranches > h2 {
+        color: red;
+        font-size: 40px;
+      }
+      #sendMsg > h2 {
+        text-transform: uppercase;
+        color: red;
+      }
+      #contactUsMethodsId {
+        display: flex;
+        padding-top: 80px;
+        padding-bottom: 200px;
+      }
+      #form > button {
+        background: #b01e4d;
+        font-size: 22px;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        padding: 15px 5px;
+        font-weight: bold;
+        width: 40%;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      .row > img {
+        padding-right: 25px;
+      }
+      .firstBranch > h3 {
+        color: white;
+        margin-bottom: 20px;
+      }
+      #branchesContact {
+        padding-top: 60px;
+        padding-left: 50px;
+      }
+
+      #sec2Right > div {
+        display: flex;
+      }
+      #sec2Right > h1 {
+        color: red;
+        margin: 20px 0px;
+        font-size: 36px;
+      }
+      #sec2Right > h2 {
+        color: white;
+        margin: 20px 0px;
+      }
+      #sec2Right > div > p {
+        color: red;
+        padding: 20px;
+      }
+      .telephone {
+        color: white !important;
+      }
+      /* section  3 */
+      #sec3 {
+        background: white;
+      }
+      #map {
+        margin-top: -50px;
+        padding-bottom: 20px;
+        height: 300px;
+      }
+      placeholder {
+        color: white;
+      }
+
+      /* Media quary */
+      @media screen and (max-width: 1240px) {
+        .wrapper {
+          width: 96%;
+          padding-left: 2%;
+          padding-right: 2;
+        }
+      }
+      @media screen and (max-width: 1080px) {
+        /* main menu */
+        #mainMenu {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 980px) {
+        /* section 1 */
+        #contact {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+        }
+        #sec1Left {
+          align-items: center;
+          width: 100%;
+        }
+        #sec1Right > img {
+          width: 100%;
+        }
+        /* section 2 */
+        #sec2Container {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+        }
+        #sec2Left {
+          width: 100%;
+        }
+        #sec2Right {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        /* main menu */
+        #logo {
+          height: 30px;
+        }
+        #menuIcon {
+          height: 30px;
+        }
+        /* section 1 */
+        #sec1Right > img {
+          width: 100%;
+          height: 300px;
+        }
+
+        #sec1Left > h1 {
+          text-align: center;
+        }
+        /* footer */
+        #footerMenu {
+          flex-direction: column;
+          align-items: center;
+        }
+        #footerMenu > span {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        /* section  1 */
+        #sec1Left > h1 {
+          font-size: 30px;
+        }
+        #sec1Left > p {
+          font-size: 15px;
+        }
+        #sec1Left > div > p {
+          font-size: 15px;
+        }
+        /* section 2 */
+        #sec2Left > h1 {
+          font-size: 30px;
+          text-align: center;
+        }
+        .field > p {
+          font-size: 15px;
+        }
+        #form > button {
+          font-size: 15px;
+        }
+        #sec2Right > h1 {
+          font-size: 30px;
+        }
+        #sec2Right > h2 {
+          font-size: 20px;
+        }
+        #sec2Right > div > p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="wrapper" id="headerContent">
+        <img src="images/logo.svg" alt="Logo" id="logo" />
+        <div id="headerRight">
+          <nav id="mainMenu">
+            <a href="index.html" class="active">Home</a>
+            <span>|</span>
+            <a href="Phones.html">Phones & Accessories</a>
+            <span>|</span>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+          <img id="menuIcon" src="images/menu-icon.svg" alt="Menu" />
+        </div>
+      </div>
+    </header>
+    <!-- Section 1 -->
+    <section id="sec1">
+      <div class="wrapper">
+        <div id="contact">
+          <div id="sec1Left">
+            <h1>Contact us</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              minima libero adipisci, magnam unde ratione eum, ab quam
+              reprehenderit reiciendis totam eveniet molestiae accusantium
+              autem?s
+            </p>
+            <div>
+              <img
+                src="images/location-icon-purple.svg"
+                alt="location-icon-purple"
+              />
+              <p>
+                34/b . Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Fugiat, aspernatur facere quasi quo libero possimus atque
+                pariatur cum accusamus blanditiis.
+              </p>
+            </div>
+            <div>
+              <img src="images/call-icon-purple.svg" alt="call-icon-purple" />
+              <p>077 777 7777 <br />077 777 7777</p>
+            </div>
+            <div>
+              <img src="images/email-icon-purple.svg" alt="email-icon-purple" />
+              <p>contactus@gmail.com</p>
+            </div>
+          </div>
+          <div id="sec1Right">
+            <img src="images/girl.png" alt="customer-support" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section  2 -->
+    <section id="sec2">
+      <div class="wrapper" id="sec2Container">
+        <div id="sec2Left">
+          <h1>Send your message</h1>
+          <form id="form" action="">
+            <div class="field">
+              <p class="label">Your Name</p>
+              <input type="text" />
+            </div>
+            <div class="field">
+              <p class="label">Email Address</p>
+              <input type="email" />
+            </div>
+            <div class="field">
+              <p id="textP" class="label">Message</p>
+              <textarea id="textarea"></textarea>
+            </div>
+            <button>Submit</button>
+          </form>
+        </div>
+        <div id="sec2Right">
+          <h1>our branches</h1>
+          <h2>lipsum lorem</h2>
+          <div>
+            <img src="images/location-icon-pink.svg" alt="location-icon-pink" />
+            <p>
+              34/b Lorem ipsum dolor sit amet consectetur <br />adipisicing
+              elit.
+            </p>
+          </div>
+          <div>
+            <img src="images/call-icon-pink.svg" alt="location-icon-pink" />
+            <p class="telephone">012 345 6789 / 012 987 6543</p>
+          </div>
+          <h2>yesolvio leipum</h2>
+          <div>
+            <img src="images/location-icon-pink.svg" alt="location-icon-pink" />
+            <p>
+              34/b Lorem ipsum dolor sit amet consectetur <br />adipisicing
+              elit.
+            </p>
+          </div>
+          <div>
+            <img src="images/call-icon-pink.svg" alt="location-icon-pink" />
+            <p class="telephone">012 345 6789 / 012 987 6543</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3 -->
+    <section id="sec3">
+      <div class="wrapper">
+        <iframe
+          id="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.3609749610578!2d80.03251347499807!3d7.084084892918878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb6a031eb25f%3A0x5d31d65e1bffe988!2sRevoise!5e0!3m2!1sen!2slk!4v1697451267790!5m2!1sen!2slk"
+          width="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <!-- footer -->
+
+    <footer>
+      <div class="wrapper">
+        <nav id="footerMenu">
+          <a href="index.html">Home</a>
+          <span>|</span>
+          <a href="Phones.html">Phones &amp; Accessories</a>
+          <span>|</span>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <p id="footerText">All Rights Reserved &copy; Webclass</p>
+      </div>
+    </footer>
+  </body>
+</html>
